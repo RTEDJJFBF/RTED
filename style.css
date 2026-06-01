@@ -1,1 +1,138 @@
+/* ==========================================================================
+   1. CONFIGURAÇÕES GERAIS E RESETS
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
+body {
+    background-color: #f4f7f6;
+    color: #333333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* ==========================================================================
+   2. ESTRUTURA SEMÂNTICA (Layout)
+   ========================================================================== */
+header {
+    background-color: #1a365d;
+    color: #ffffff;
+    padding: 2rem text-align;
+    text-align: center;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+footer {
+    background-color: #2d3748;
+    color: #e2e8f0;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+}
+
+/* ==========================================================================
+   3. COMPONENTES: FORMULÁRIO
+   ========================================================================== */
+.form-container {
+    background-color: #ffffff;
+    padding: 2.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 450px;
+}
+
+.form-container h2 {
+    margin-bottom: 1.5rem;
+    color: #2d3748;
+}
+
+.form-group {
+    margin-bottom: 1.25rem;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+input {
+    padding: 0.75rem;
+    border: 2px solid #cbd5e0;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.2s;
+}
+
+/* MELHORIA DE ACESSIBILIDADE 1: Indicador de foco nítido para navegação por teclado */
+input:focus {
+    outline: 3px solid #3182ce;
+    outline-offset: 1px;
+    border-color: transparent;
+}
+
+button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #3182ce;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-top: 1rem;
+}
+
+button:hover, button:focus {
+    background-color: #2b6cb0;
+}
+
+/* ==========================================================================
+   4. ESTADOS DE FEEDBACK (Mensagens e Erros)
+   ========================================================================== */
+.error-text {
+    color: #e53e3e;
+    font-size: 0.85rem;
+    margin-top: 0.25rem;
+    min-height: 1.25rem; /* Evita que o layout "pule" quando o erro aparece */
+    display: block;
+}
+
+.message {
+    padding: 0.75rem;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    display: none; /* Escondido por padrão */
+    font-weight: bold;
+    text-align: center;
+}
+
+.message.success {
+    display: block;
+    background-color: #c6f6d5;
+    color: #22543d;
+    border: 1px solid #9ae6b4;
+}
+
+.message.error-banner {
+    display: block;
+    background-color: #fed7d7;
+    color: #742a2a;
+    border: 1px solid #feb2b2;
+}
